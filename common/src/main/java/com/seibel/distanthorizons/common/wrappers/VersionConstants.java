@@ -104,11 +104,7 @@ public class VersionConstants implements IVersionConstants
 	@Override
 	public EDhApiRenderApi getDefaultRenderingApi()
 	{
-		#if MC_VER <= MC_1_21_11
-			return EDhApiRenderApi.OPEN_GL;
-		#else
-			return EDhApiRenderApi.BLAZE_3D;
-		#endif
+		return EDhApiRenderApi.OPEN_GL;
 	}
 	
 	//endregion
