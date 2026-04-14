@@ -1,6 +1,17 @@
 # <img src="https://gitlab.com/distant-horizons-team/distant-horizons-core/-/raw/main/_Misc%20Files/logo%20files/new/SVG/Distant-Horizons.svg" height="128px"> 
 _See farther without turning your game into a slide show._
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Z8Z852YLV)
+
+## Fork Changes (by rinpoche-peregrine)
+
+- Updated for Minecraft 26.1 (Fabric + NeoForge)
+- Default rendering API set to OpenGL for Iris shader compatibility
+- Removed bundled Fabric API to prevent version conflicts with modpacks
+- Removed stale google-collect dependency
+
+Original mod by: James Seibel, Leonardo Amato, Cola, coolGi, Ran, Leetom, pshsh
+
 <br>
 
 # What is Distant Horizons?
