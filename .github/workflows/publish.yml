@@ -1,0 +1,63 @@
+name: Publish on GitHub, CurseForge & Modrinth
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - 'v*'
+
+env:
+  MINECRAFT_VERSION: "26.1"
+  JAVA_VERSION: 25
+  MOD_VERSION: "3.0.0-b-dev"
+  RELEASE_NAME: "Distant Horizons 3.0.0-b-dev for MC 26.1"
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Set up Java ${{ env.JAVA_VERSION }}
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: ${{ env.JAVA_VERSION }}
+
+      - name: Make Gradle wrapper executable
+        run: chmod +x ./gradlew
+
+      - name: Build mod
+        run: ./gradlew clean build
+
+      - name: Publish to CurseForge, Modrinth & GitHub
+        uses: Kir-Antipov/mc-publish@v3.2
+        with:
+          # The merged Forgix jar (not build/libs which is an empty stub)
+          files: build/forgix/!(*-@(dev|sources|javadoc)).jar
+
+          curseforge-id: ${{ vars.CURSEFORGE_ID }}
+          curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
+
+          modrinth-id: ${{ vars.MODRINTH_ID }}
+          modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
+
+          github-tag: "v${{ env.MOD_VERSION }}"
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-generate-changelog: true
+
+          name: ${{ env.RELEASE_NAME }}
+          version: ${{ env.MOD_VERSION }}
+          changelog-file: CHANGELOG.md
+
+          loaders: |
+            fabric
+            neoforge
+          game-versions: ${{ env.MINECRAFT_VERSION }}
+          java: ${{ env.JAVA_VERSION }}
