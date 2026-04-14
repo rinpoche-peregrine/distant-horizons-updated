@@ -27,69 +27,16 @@ Below is a video demonstrating the system:
 
 ## Minecraft and Library Versions
 
-### This branch supports the following versions of Minecraft:
+### This fork supports the following version of Minecraft:
 
-#### 1.20.4, 1.20.3 (Default)
-Fabric: 0.15.1\
-Fabric API: 0.91.2+1.20.4\
-Forge: 49.0.30\
-NeoForge: 118-beta\
-Parchment: 1.20.2:2023.12.10\
-Modmenu: 9.0.0-pre.1
+#### 26.1, 26.1.1, 26.1.2
+Java: 25\
+Fabric Loader: 0.18.5\
+Fabric API: 0.145.4+26.1.2\
+NeoForge: 15-beta\
+Modmenu: 18.0.0-alpha.8
 
-#### 1.20.2
-Fabric: 0.14.24\
-Fabric API: 0.90.4+1.20.2\
-Forge: 48.0.13\
-Parchment: 1.20.1:2023.09.03\
-Modmenu: 8.0.0
-
-#### 1.20.1, 1.20
-Fabric: 0.14.24\
-Fabric API: 0.90.4+1.20.1\
-Forge: 47.2.1\
-Parchment: 1.20.1:2023.09.03\
-Modmenu: 7.2.2
-
-#### 1.19.4
-Fabric: 0.14.24\
-Fabric API: 0.87.1+1.19.4\
-Forge: 45.2.4\
-Parchment: 1.19.4:2023.06.26\
-Modmenu: 6.3.1
-
-#### 1.19.2
-Fabric: 0.14.24\
-Fabric API: 0.76.1+1.19.2\
-Forge: 43.3.2\
-Parchment: 1.19.2:2022.11.27\
-Modmenu: 4.2.0-beta.2
-
-#### 1.18.2
-Fabric: 0.14.24\
-Fabric API: 0.76.0+1.18.2\
-Forge: 40.2.10\
-Parchment: 1.18.2:2022.11.06\
-Modmenu: 3.2.5
-
-#### 1.17.1, 1.17
-Fabric: 0.14.24\
-Fabric API: 0.46.1+1.17\
-Forge: 37.1.1\
-Parchment: 1.17.1:2021.12.12\
-Modmenu: 2.0.14
-
-#### 1.16.5, 1.16.4
-Fabric: 0.14.24\
-Fabric API: 0.42.0+1.16\
-Forge: 36.2.39\
-Parchment: 1.16.5:2022.03.06\
-Modmenu: 1.16.22
-
-### Versions no longer supported
-- 1.18.1, 1.18
-- 1.19.1, 1.19
-- 1.19.3
+For older Minecraft versions, see the [original mod](https://gitlab.com/distant-horizons-team/distant-horizons).
 
 <br>
 
